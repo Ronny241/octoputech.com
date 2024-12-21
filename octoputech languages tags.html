@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Web Development Tags</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 1rem;
+        }
+        section {
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 1rem;
+            padding: 1rem;
+            width: 30%;
+            cursor: pointer;
+        }
+        section h2 {
+            background-color: #0078d7;
+            color: white;
+            margin: -1rem -1rem 0;
+            padding: 0.5rem;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+        section ul {
+            list-style-type: none;
+            padding: 0;
+            display: none;
+        }
+        section ul li {
+            margin-bottom: 0.5rem;
+        }
+        section ul li strong {
+            color: #333;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+
+            sections.forEach(section => {
+                section.addEventListener('click', () => {
+                    const ul = section.querySelector('ul');
+                    const isVisible = ul.style.display === 'block';
+
+                    // Hide all other sections
+                    document.querySelectorAll('section ul').forEach(otherUl => {
+                        otherUl.style.display = 'none';
+                    });
+
+                    // Toggle the clicked section
+                    ul.style.display = isVisible ? 'none' : 'block';
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Web Development Tags Reference</h1>
+    </header>
+    <main>
+        <section id="html">
+            <h2>HTML Tags</h2>
+            <ul>
+                <li><strong>&lt;a&gt;</strong>: Defines a hyperlink.</li>
+                <li><strong>&lt;abbr&gt;</strong>: Defines an abbreviation or acronym.</li>
+                <li><strong>&lt;address&gt;</strong>: Defines contact information.</li>
+                <li><strong>&lt;area&gt;</strong>: Defines an area inside an image map.</li>
+                <li><strong>&lt;article&gt;</strong>: Defines independent content.</li>
+                <li><strong>&lt;aside&gt;</strong>: Defines content aside from the main content.</li>
+                <li><strong>&lt;audio&gt;</strong>: Embeds sound content.</li>
+                <li><strong>&lt;b&gt;</strong>: Defines bold text.</li>
+                <li><strong>&lt;base&gt;</strong>: Specifies the base URL for all relative URLs.</li>
+                <li><strong>&lt;bdi&gt;</strong>: Isolates text directionally.</li>
+                <li><strong>&lt;bdo&gt;</strong>: Overrides the current text direction.</li>
+                <li><strong>&lt;blockquote&gt;</strong>: Defines a block of quoted text.</li>
+                <li><strong>&lt;body&gt;</strong>: Defines the document's body.</li>
+                <li><strong>&lt;br&gt;</strong>: Inserts a single line break.</li>
+                <li><strong>&lt;button&gt;</strong>: Defines a clickable button.</li>
+                <li><strong>&lt;canvas&gt;</strong>: Used for graphics drawing.</li>
+                <li><strong>&lt;caption&gt;</strong>: Defines a table caption.</li>
+                <li><strong>&lt;cite&gt;</strong>: Defines a citation.</li>
+                <li><strong>&lt;code&gt;</strong>: Defines computer code text.</li>
+                <li><strong>&lt;col&gt;</strong>: Specifies column properties for each column.</li>
+                <li><strong>&lt;colgroup&gt;</strong>: Specifies a group of columns.</li>
+                <li><strong>&lt;data&gt;</strong>: Links content to a machine-readable value.</li>
+                <li><strong>&lt;datalist&gt;</strong>: Specifies a list of pre-defined options.</li>
+                <li><strong>&lt;dd&gt;</strong>: Describes a term/name in a description list.</li>
+                <li><strong>&lt;del&gt;</strong>: Defines deleted text.</li>
+                <li><strong>&lt;details&gt;</strong>: Defines additional details.</li>
+                <li><strong>&lt;dfn&gt;</strong>: Specifies a term that is being defined.</li>
+                <li><strong>&lt;dialog&gt;</strong>: Defines a dialog box.</li>
+                <li><strong>&lt;div&gt;</strong>: Defines a section in a document.</li>
+                <li><strong>&lt;dl&gt;</strong>: Defines a description list.</li>
+                <li><strong>&lt;dt&gt;</strong>: Defines a term/name in a description list.</li>
+                <li><strong>&lt;em&gt;</strong>: Defines emphasized text.</li>
+                <li><strong>&lt;embed&gt;</strong>: Embeds external content.</li>
+                <li><strong>&lt;fieldset&gt;</strong>: Groups related elements in a form.</li>
+                <li><strong>&lt;figcaption&gt;</strong>: Defines a caption for a figure.</li>
+                <li><strong>&lt;figure&gt;</strong>: Groups media content.</li>
+                <li><strong>&lt;footer&gt;</strong>: Defines a footer.</li>
+                <li><strong>&lt;form&gt;</strong>: Defines an HTML form.</li>
+                <li><strong>&lt;h1&gt; to &lt;h6&gt;</strong>: Define HTML headings.</li>
+                <li><strong>&lt;head&gt;</strong>: Contains meta-information about the document.</li>
+                <li><strong>&lt;header&gt;</strong>: Defines a header.</li>
+                <li><strong>&lt;hgroup&gt;</strong>: Groups headings.</li>
+                <li><strong>&lt;hr&gt;</strong>: Defines a thematic break.</li>
+                <li><strong>&lt;html&gt;</strong>: Defines the root element.</li>
+                <li><strong>&lt;i&gt;</strong>: Defines italicized text.</li>
+                <li><strong>&lt;iframe&gt;</strong>: Defines an inline frame.</li>
+                <li><strong>&lt;img&gt;</strong>: Embeds an image.</li>
+                <li><strong>&lt;input&gt;</strong>: Defines an input field.</li>
+                <li><strong>&lt;ins&gt;</strong>: Defines inserted text.</li>
+                <li><strong>&lt;kbd&gt;</strong>: Defines keyboard input.</li>
+                <li><strong>&lt;label&gt;</strong>: Defines a label for an input element.</li>
+                <li><strong>&lt;legend&gt;</strong>: Defines a caption for a &lt;fieldset&gt; element.</li>
+                <li><strong>&lt;li&gt;</strong>: Defines a list item.</li>
+                <li><strong>&lt;link&gt;</strong>: Defines a relationship between a document and an external resource.</li>
+                <li><strong>&lt;main&gt;</strong>: Specifies the main content of the document.</li>
+                <li><strong>&lt;map&gt;</strong>: Defines an image map.</li>
+                <li><strong>&lt;mark&gt;</strong>: Highlights text.</li>
+                <li><strong>&lt;meta&gt;</strong>: Defines metadata.</li>
+                <li><strong>&lt;meter&gt;</strong>: Defines a scalar measurement.</li>
+                <li><strong>&lt;nav&gt;</strong>: Defines navigation links.</li>
+                <li><strong>&lt;noscript&gt;</strong>: Defines alternate content for users who don't support scripts.</li>
+                <li><strong>&lt;object&gt;</strong>: Embeds an external resource.</li>
+                <li><strong>&lt;ol&gt;</strong>: Defines an ordered list.</li>
+                <li><strong>&lt;option&gt;</strong>: Defines an option in a drop-down list.</li>
+                <li><strong>&lt;output&gt;</strong>: Represents the result of a calculation.</li>
+            </ul>
+        </section>
+        <section id="css">
+            <h2>CSS Properties</h2>
+            <ul>
+                <li><strong>color</strong>: Sets the color of text.</li>
+                <li><strong>background-color</strong>: Sets the background color of an element.</li>
+                <li><strong>font-size</strong>: Sets the size of the font.</li>
+                <li><strong>margin</strong>: Sets the space around an element.</li>
+                <li><strong>padding</strong>: Sets the space inside an element.</li>
+                <li><strong>border</strong>: Sets the border of an element.</li>
+                <li><strong>display</strong>: Specifies the display behavior of an element.</li>
+                <li><strong>flex</strong>: Defines how a flex item will grow or shrink.</li>
+                <li><strong>grid-template-columns</strong>: Defines the column structure of a grid container.</li>
+                <li><strong>align-items</strong>: Aligns items vertically in a flex or grid container.</li>
+                <li><strong>justify-content</strong>: Aligns items horizontally in a flex or grid container.</li>
+                <li><strong>position</strong>: Specifies the type of positioning for an element.</li>
+                <li><strong>top</strong>: Specifies the top position of an element.</li>
+                <li><strong>left</strong>: Specifies the left position of an element.</li>
+                <li><strong>right</strong>: Specifies the right position of an element.</li>
+                <li><strong>bottom</strong>: Specifies the bottom position of an element.</li>
+                <li><strong>z-index</strong>: Specifies the stack order of an element.</li>
+                <li><strong>box-shadow</strong>: Adds shadow to an element's box.</li>
+                <li><strong>text-align</strong>: Specifies the horizontal alignment of text.</li>
+                <li><strong>line-height</strong>: Sets the height of lines of text.</li>
+                <li><strong>opacity</strong>: Sets the transparency level of an element.</li>
+                <li><strong>transform</strong>: Applies transformations like rotate, scale, and skew.</li>
+                <li><strong>transition</strong>: Adds animation between property changes.</li>
+                <li><strong>animation</strong>: Specifies animations for elements.</li>
+                <li><strong>clip-path</strong>: Defines a clipping region for an element.</li>
+                <li><strong>overflow</strong>: Controls how content is handled when it's larger than its container.</li>
+            </ul>
+        </section>
+        <section id="javascript">
+            <h2>JavaScript Methods</h2>
+            <ul>
+                <li><strong>addEventListener()</strong>: Attaches an event handler to an element.</li>
+                <li><strong>getElementById()</strong>: Selects an element by its ID.</li>
+                <li><strong>querySelector()</strong>: Selects the first element matching a CSS selector.</li>
+                <li><strong>querySelectorAll()</strong>: Selects all elements matching a CSS selector.</li>
+                <li><strong>createElement()</strong>: Creates a new HTML element.</li>
+                <li><strong>appendChild()</strong>: Appends a child element to a parent element.</li>
+                <li><strong>removeChild()</strong>: Removes a child element from a parent element.</li>
+                <li><strong>setAttribute()</strong>: Sets an attribute for an element.</li>
+                <li><strong>getAttribute()</strong>: Gets the value of an attribute.</li>
+                <li><strong>add()</strong>: Adds an item to a Set or a class to an element.</li>
+                <li><strong>remove()</strong>: Removes an item from a Set or a class from an element.</li>
+                <li><strong>replace()</strong>: Replaces a substring in a string.</li>
+                <li><strong>toString()</strong>: Converts a value to a string.</li>
+                <li><strong>parseInt()</strong>: Parses a string into an integer.</li>
+                <li><strong>parseFloat()</strong>: Parses a string into a floating-point number.</li>
+                <li><strong>JSON.stringify()</strong>: Converts an object to a JSON string.</li>
+                <li><strong>JSON.parse()</strong>: Parses a JSON string into an object.</li>
+                <li><strong>setTimeout()</strong>: Executes a function after a specified delay.</li>
+                <li><strong>setInterval()</strong>: Repeats a function at specified intervals.</li>
+                <li><strong>fetch()</strong>: Performs an HTTP request.</li>
+                <li><strong>map()</strong>: Creates a new array by applying a function to each element.</li>
+                <li><strong>filter()</strong>: Creates a new array with elements that meet a condition.</li>
+                <li><strong>reduce()</strong>: Reduces an array to a single value.</li>
+                <li><strong>sort()</strong>: Sorts an array in place.</li>
+                <li><strong>reverse()</strong>: Reverses the order of elements in an array.</li>
+                <li><strong>includes()</strong>: Checks if an array includes a specified element.</li>
+                <li><strong>push()</strong>: Adds an element to the end of an array.</li>
+                <li><strong>pop()</strong>: Removes the last element from an array.</li>
+                <li><strong>shift()</strong>: Removes the first element from an array.</li>
+                <li><strong>unshift()</strong>: Adds an element to the beginning of an array.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Web Development Reference. All rights reserved.</p>
+    </footer>
+</body>
+</html>
