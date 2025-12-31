@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>2026 Goals</title>
+  <link rel="stylesheet" href="2026.css">
+</head>
+<body>
+
+<h1>🎯 My 2026 Goals</h1>
+
+<div class="container">
+
+  <div class="box">
+    <h2>Daily Goals</h2>
+    <input id="dailyInput" placeholder="New daily goal">
+    <button onclick="addGoal('daily')">Add</button>
+    <ul id="dailyList"></ul>
+  </div>
+
+  <div class="box">
+    <h2>Monthly Goals</h2>
+    <input id="monthlyInput" placeholder="New monthly goal">
+    <button onclick="addGoal('monthly')">Add</button>
+    <ul id="monthlyList"></ul>
+  </div>
+
+  <div class="box">
+    <h2>Yearly Goals</h2>
+    <input id="yearlyInput" placeholder="New yearly goal">
+    <button onclick="addGoal('yearly')">Add</button>
+    <ul id="yearlyList"></ul>
+  </div>
+
+  <div class="box progress">
+    <h2>Progress</h2>
+    <p id="progressText">0%</p>
+    <div class="bar">
+      <div id="progressBar"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="2026.js"></script>
+</body>
+</html>

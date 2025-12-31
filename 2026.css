@@ -1,0 +1,165 @@
+:root {
+  --bg: #0f172a;
+  --card: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.15);
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #22c55e;
+  --accent-dark: #16a34a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Inter", Arial, sans-serif;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: var(--text);
+  padding: 30px;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Card */
+.box {
+  background: var(--card);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+}
+
+.box h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  outline: none;
+  margin-bottom: 10px;
+}
+
+input::placeholder {
+  color: var(--muted);
+}
+
+input:focus {
+  border-color: var(--accent);
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #022c22;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+/* List */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 6px;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+li:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+/* Progress */
+.progress {
+  text-align: center;
+}
+
+.progress p {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+.progress .bar {
+  width: 100%;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(135deg, #22c55e, #4ade80);
+  border-radius: 30px;
+  transition: width 0.4s ease;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+}
